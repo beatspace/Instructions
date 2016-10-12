@@ -198,6 +198,7 @@ extension CoachMarksViewController {
                 self.instructionsRootView.passthrough = coachMark.allowTouchInsideCutoutPath
 
                 self.enableInteraction()
+                self.currentCoachMarkView?.userInteractionEnabled = !coachMark.disableCoachMarkTap
                 completion?()
             }
         )

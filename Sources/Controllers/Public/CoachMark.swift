@@ -61,6 +61,9 @@ public struct CoachMark {
     /// `CoachMarkController.allowOverlayTap`.
     public var disableOverlayTap: Bool = false
 
+    /// Set this property to `true` to disable a tap on the coach mark.
+    public var disableCoachMarkTap: Bool = false
+
     /// Set this property to `true` to allow touch forwarding inside the cutoutPath.
     public var allowTouchInsideCutoutPath: Bool = false
 
