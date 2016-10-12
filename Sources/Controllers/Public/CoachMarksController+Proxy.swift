@@ -60,6 +60,12 @@ extension CoachMarksController: CoachMarksControllerProxyDelegate {
                                        forIndex: index)
     }
 
+    func coachMarkDidShow(inout coachMark: CoachMark, forIndex index: Int) {
+        delegate?.coachMarksController(self,
+                                       coachMarkDidShow: &coachMark,
+                                       forIndex: index)
+    }
+
     func coachMarkWillDisappear(coachMark: CoachMark, forIndex index: Int) {
         delegate?.coachMarksController(self,
                                        coachMarkWillDisappear: coachMark,

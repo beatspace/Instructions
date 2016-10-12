@@ -32,6 +32,10 @@ public protocol CoachMarksControllerDelegate: class {
                               forIndex index: Int)
 
     func coachMarksController(coachMarksController: CoachMarksController,
+                              inout coachMarkDidShow coachMark: CoachMark,
+                              forIndex index: Int)
+
+    func coachMarksController(coachMarksController: CoachMarksController,
                               coachMarkWillDisappear coachMark: CoachMark,
                               forIndex index: Int)
 
@@ -48,6 +52,10 @@ public extension CoachMarksControllerDelegate {
     func coachMarksController(coachMarksController: CoachMarksController,
                               inout coachMarkWillShow coachMark: CoachMark,
                               forIndex index: Int) { }
+
+    func coachMarksController(coachMarksController: CoachMarksController,
+                              inout coachMarkDidShow coachMark: CoachMark,
+                                                     forIndex index: Int) {}
 
     func coachMarksController(coachMarksController: CoachMarksController,
                               coachMarkWillDisappear coachMark: CoachMark,
@@ -69,6 +77,8 @@ protocol CoachMarksControllerProxyDelegate: class {
     func coachMarkWillLoadForIndex(index: Int) -> Bool
 
     func coachMarkWillShow(inout coachMark: CoachMark, forIndex index: Int)
+
+    func coachMarkDidShow(inout coachMark: CoachMark, forIndex index: Int)
 
     func coachMarkWillDisappear(coachMark: CoachMark, forIndex index: Int)
 

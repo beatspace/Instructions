@@ -201,6 +201,7 @@ public class FlowManager {
 
             coachMarksViewController.showCoachMark(&currentCoachMark!, withIndex: currentIndex) {
                 self.canShowCoachMark = true
+                self.delegate?.coachMarkDidShow(&self.currentCoachMark!, forIndex: self.currentIndex)
             }
         }
     }
